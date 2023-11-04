@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+ body{
+    height:100vh ;
+    background-color: rgba(12, 7, 7, 0.829);
+    display: grid;
+    place-content: center;
+    font-family: sans-serif;
+} 
+
+.container{
+    height:400px;
+    width: 400px;
+    box-shadow:1px 3px 3px  #0bb1b150;
+    border-radius: 1rem;
+    background-color: rgba(2, 0, 0, 0.308);
+
+}
+.card{
+   padding: 16px 0;
+}
+ .card .text{
+    margin: 8px 1rem;
+    text-transform: uppercase;
+    line-height: 1.9rem;
+    color: #ffff;
+    text-align: center;
+
+}
+.card .text h5{
+    font-size: 0.90rem;
+    font-weight: 600;
+    
+}
+.card .text p{
+    font-size: 0.7rem; 
+
+}
+.year-hour{
+    display: flex;
+    gap: 30px;
+}
+.year-hour .figure h1{
+    display: inline-block;
+    box-shadow:0 1px 2px  rgba(2, 0, 0, 0.308) ;
+    padding: 5px 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.year-hour .figure p{
+    margin: 0 10px;
+    font-size: .6rem;
+}
+ .card .current{
+    margin-left: 18px;
+    color: #89f7f7a6;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+}
+.card .underline{
+    height: 8px;
+    width: 86%;
+    background:rgba(0, 0, 0, 0.89);
+    margin: 18px 18px;
+    position: relative;
+    border-radius: 10px 10px;    
+
+}
+.underline::before{
+    content: "";
+    top: 0;
+    bottom: 0;
+position: absolute;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, #f38303d2 10%,rgba(255, 38, 0, 0.664),rgba(255, 68, 0, 0.925));
+    border-radius: inherit;
+
+}
+.card .total-p{
+    text-transform: uppercase;
+    font-size:.6rem ;
+    line-height: 25px;
+    color: #f2f2f2;
+    margin: 18px 18px;
+}
+.buy-button{
+    margin: 18px 18px;
+
+    width: 93%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buy-button button{
+    width:  inherit;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgba(230, 97, 44, 0.89);
+}
+.buy-button button a{
+    padding: 10px;
+    color: #f2f2f2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 550;
+    display: block;
+    /* height: 100%; */
+}
+.connect-wallet {
+    text-align: center;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: #89f7f7a6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
